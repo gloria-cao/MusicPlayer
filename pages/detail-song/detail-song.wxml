@@ -1,0 +1,16 @@
+<!--pages/detail-song/detail-song.wxml-->
+<!-- 小程序数据共享 -->
+<view class="detail-song">
+  <view wx:if="{{type === 'menu'}}">
+    <menu-header itemData="{{rankingInfo}}"></menu-header>
+  </view>
+  <view wx:else>
+    <view class="title">
+    {{rankingInfo.name}}
+  </view>
+  </view>
+  <song-item-v2 
+  itemData="{{rankingInfo.tracks}}"
+  bindtap="onItemTab"
+   />
+</view>

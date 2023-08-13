@@ -1,0 +1,18 @@
+<!--components/hotlist-item/hotlist-iten.wxml-->
+<wxs src="../../utils/format.wxs" module="format"/>
+
+<view class="content" style="min-width: {{itemWidth}}px;" >
+  <block wx:for="{{itemData}}" wx:key="id">
+    <view class="item" bindtap="handlePlayList" data-id="{{item.id}}">
+      <view class="top">
+        <view class="playCount">
+        {{format.countFormat(item.playCount)}}
+      </view>
+      <image class="image" src="{{item.coverImgUrl}}" />
+      </view>
+    <view class="name">
+      {{item.name}}
+    </view>
+    </view>
+  </block>
+  </view>

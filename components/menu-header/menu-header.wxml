@@ -1,0 +1,15 @@
+<!--components/menu-header/menu-header.wxml-->
+<view class="menu-header">
+  <image class="image" src="{{itemData.backgroundCoverUrl}}"/>
+  <view class="content">
+    <view class="intro">
+      简介：{{itemData.description}}
+    </view>
+    <view class="like">
+      收藏
+    </view>
+    <view class="share">
+      分享
+    </view>
+  </view>
+</view>

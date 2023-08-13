@@ -1,0 +1,24 @@
+/* components/song-item-v2/song-item-v2.wxss */
+.content {
+  padding: 10rpx 22rpx;
+}
+.left {
+  margin-right: 22rpx;
+  display: inline-block;
+}
+.right {
+  display: inline-block;
+}
+.socre {
+  display: flex;
+  align-items: center;
+  margin-left: 42rpx;
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  color: #666;
+}
+.image {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 22rpx;
+}

@@ -1,0 +1,29 @@
+/* components/menu-header/menu-header.wxss */
+.menu-header {
+  height: 20%;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.image {
+  width: 100%;
+  padding-left: -10px;
+}
+.content {
+  color: aliceblue;
+}
+.intro {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 400rpx;
+}
+.like {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+.share {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}

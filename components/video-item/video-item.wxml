@@ -1,0 +1,14 @@
+<!--components/video-list-item/index.wxml-->
+<!-- 引入外部文件进行使用 要给模块起名字 -->
+<wxs src="/utils/format.wxs" module="format"/>
+<view class="item" bindtap="handleItemClick">
+  <view class="album">
+  <!--  mode="widthFix" 设置宽度跟随 -->
+    <image class="image" src="{{itemData.cover}}" mode="widthFix"></image>
+    <view class="info">
+      <view class="count">{{format.countFormat(itemData.playCount)}}</view>
+      <view>{{format.formatDuration(itemData.mv.videos[0].duration)}}</view>
+    </view>
+  </view>
+  <view class="content">{{itemData.name}} - {{itemData.artistName}}</view>
+</view>

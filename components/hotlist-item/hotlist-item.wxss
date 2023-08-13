@@ -1,0 +1,49 @@
+/* components/hotlist-item/hotlist-iten.wxss */
+/*          热门歌单         */
+.content {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  margin-left: -35rpx;
+}
+.item {
+  width: 400rpx;
+  margin: 0 10rpx ;
+  margin-left: 24rpx;
+}
+.item:last-of-type {
+  margin-right: 24rpx;
+}
+.top {
+  position: relative;
+}
+.image {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 12rpx;
+}
+.name {
+  height: 2em;
+  line-height: 1em;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 超出两行显示声乐好 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.playCount {
+  position: absolute;
+  background-color: rgba(66, 66, 66, 0.8);
+  border-radius: 12rpx;
+  color: #ffffff;
+  font-size: 24rpx;
+  padding: 0 6rpx;
+  bottom: 8rpx;
+  right: 0;
+}
+/*  隐藏滚动条 */
+.content::-webkit-scrollbar {
+		display: none
+}

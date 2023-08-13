@@ -1,0 +1,21 @@
+/* pages/main-music/main-music.wxss */
+page {
+  /* 设置vant搜索框背景颜色 */
+  --search-background-color: #fff;
+  --search-padding: 0;
+
+  box-sizing: border-box;
+  /* 设置padding宽度增加了所以设置box-sizing */
+  padding: 0 24rpx;
+  background-color: #fafafa;
+}
+
+/*         轮播图           */
+.banner {
+  border-radius: 15rpx;
+  /* 图片会超过圆角范围，超出范围隐藏即可 */
+  overflow: hidden;
+}
+.itemImg {
+  width: 100%;
+}

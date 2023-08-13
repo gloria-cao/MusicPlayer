@@ -1,0 +1,24 @@
+<!--pages/detail-menu/detail-menu.wxml-->
+<wxs src="../../utils/format.wxs" module="format"/>
+<view class="all-menu">
+  <block wx:for="{{songMenus}}" wx:key="cat">
+    <view class="cat">
+      <area-header title="{{item.cat}}" showMore="{{false}}" />
+      <view class="list">
+        <block wx:for="{{item.playlists}}" wx:key="id" wx:for-item="iten">
+          <view class="iten">
+            <view class="top">
+            <image class="image" src="{{iten.coverImgUrl}}" mode=""/>
+            <view class="playCount">
+             {{format.countFormat(iten.playCount)}}
+            </view>
+          </view>
+          <view class="name">
+            {{iten.name}}
+          </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

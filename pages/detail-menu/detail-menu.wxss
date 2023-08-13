@@ -1,0 +1,46 @@
+/* pages/detail-menu/detail-menu.wxss */
+page {
+  box-sizing: border-box;
+  padding: 0 14rpx;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.iten {
+  width: 47%;
+  margin-bottom: 26rpx;
+  margin-right: 14rpx;
+}
+
+.top {
+  position: relative;
+}
+.image {
+  height: 350rpx;
+  width: 350rpx;
+  border-radius: 12rpx;
+}
+.playCount {
+  font-size: 26rpx;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(88, 88, 88, 0.7);
+  border-radius: 12rpx;
+  right: -10rpx;
+  bottom: 8rpx;
+}
+
+.name {
+  height: 2em;
+  line-height: 1em;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 超出两行显示声乐好 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

@@ -1,0 +1,19 @@
+/* pages/detail-video/detail-video.wxss */
+/* 设置页面的高度  */
+page {
+  height: 100vh;
+}
+
+.videoPlay {
+    width: 100%;
+}
+
+.mvDetail {
+  font-size: 25rpx;
+  color: #666666;
+}
+
+.videoContent {
+  height: calc(100%-225px);
+  
+}

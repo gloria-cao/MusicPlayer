@@ -1,0 +1,63 @@
+<!--pages/main-music/main-music.wxml-->
+<!-- Vant搜索框,聚焦跳转搜索页面 -->
+<van-search
+  value="{{ searchValue }}"
+  shape="round"
+  background="#fafafa"
+  placeholder="请输入搜索关键词"
+  bind:click-input="handleInputClick"
+/>
+
+<!-- 轮播图的展示  -->
+<swiper 
+  class="banner" 	
+  indicator-dots 	
+  circular 
+  indicator-color="#f5f5f5" 
+  autoplay
+  style="height: {{bannerHeight}}px;"
+  >
+  <block wx:for="{{bannerList}}" wx:key="bannerId">
+  <swiper-item class="item">
+    <image 
+    class="itemImg" 
+    src="{{item.pic}}" 
+    mode="widthFix"
+    bindload="handleImgLoaded"
+    />
+  </swiper-item>
+  </block>
+</swiper>
+
+<!-- 热门歌单 -->
+<view class="hot-song-list">
+  <area-header title="热门歌单" bind:menuMoreClick="onMenuMoreClick" />
+  <hotlist-item itemData="{{hotSongList}}" />
+</view>
+
+<!-- 推荐歌单 -->
+<view class="recommendList">
+  <area-header title="推荐歌单" bind:menuMoreClick="onMenuMoreClick" />
+  <hotlist-item itemData="{{recomSongList}}" />
+</view>
+
+<!-- 推荐歌曲 -->
+<view class="recommed">
+  <area-header title="推荐歌曲" bind:moreClick="onRecommendClick" />
+  <view class="list">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+    <song-item-v1 itemData="{{item}}" data-index="{{index}}" bindtap="onSongItemTab" />
+    </block>
+  </view>
+</view>
+
+<!-- 排行榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜" showMore="{{false}}" />
+  <view class="list">
+    <block wx:for="{{rankingInfo}}" wx:key="id">
+    <ranking-item itemData="{{item}}" key="{{index}}" 
+    />
+    </block>
+  </view>
+</view>

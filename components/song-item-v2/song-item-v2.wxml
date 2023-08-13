@@ -1,0 +1,17 @@
+<!--components/song-item-v2/song-item-v2.wxml-->
+<view class="list">
+  <block wx:for="{{itemData}}" wx:key="id">
+    <view class="content" data-id="{{item.id}}"  bindtap="handlePlayList">
+      <view class="left">{{index + 1}}.</view>
+      <view class="right">
+        {{item.name}}
+      </view>
+      <view class="socre">
+      <image class="image" src="../../assets/img/like.png"/>
+        <view>
+          {{item.ar[0].name}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,15 @@
+<!--components/song-item-v1/song-item-v1.wxml-->
+<view  class="song" bindtap="handlePlayList">
+  <image class="image" src="{{itemData.al.picUrl}}"/>
+  <view class="info">
+  <view class="name">
+    {{itemData.name}}
+  </view>
+  <view class="singer">
+    {{itemData.ar[0].name}}
+  </view>
+  </view>
+  <view class="arrow">
+    <van-icon name="arrow" />
+  </view>
+</view>

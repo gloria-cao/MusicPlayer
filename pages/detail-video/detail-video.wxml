@@ -1,0 +1,24 @@
+<!--pages/detail-video/detail-video.wxml-->
+<!-- 通过video组件可以播放视频 -->
+<view class="video">
+  <video class="videoPlay" src="{{mvDeatil.url}}" autoplay/>
+</view>
+
+<scroll-view class="videoContent">
+  <view class="mvDetail">
+  <view class="artistName">
+  <block>
+    作者: {{mvInfo.artistName}} 歌曲名称:《{{mvInfo.name}}》
+  </block>
+  <view>
+    发布时间: {{mvInfo.publishTime}}
+  </view>
+  </view>
+  <view class="detail">
+    {{mvInfo.desc}}
+  </view>
+</view>
+<view class="otherMv">
+    {{relativeMv}}
+</view>
+</scroll-view>

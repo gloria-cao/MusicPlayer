@@ -1,0 +1,41 @@
+// 格式化数据格式
+// 格式化播放量
+var countFormat = function(num) {
+  // 可以这样设置时作用域不一样
+  var counter = parseInt(num)
+  if(counter > 100000000) {
+    return (counter / 100000000).toFixed(1) + "亿"
+  }else if( counter > 10000) {
+    return (counter / 10000).toFixed(1) + "万"
+  }else {
+    return counter + "" 
+  }
+}
+
+// 格式化歌曲时长
+
+function padLeftZero(str) {
+  str = str.toString()
+  return ("00" + str).slice(str.length);
+}
+
+function formatDuration(duration, isMilliseconds) {
+  isMilliseconds = isMilliseconds === undefined
+  // 将毫秒转化为秒
+  if (isMilliseconds) {
+    duration = duration / 1000
+  }
+
+  // 获取时间
+  var minute = Math.floor(duration / 60)
+  var second = Math.floor(duration) % 60
+
+  // 拼接字符串
+  return padLeftZero(minute) + ":" + padLeftZero(second)
+}
+
+// 导出模块
+module.exports = {
+  countFormat: countFormat,
+  formatDuration: formatDuration
+}
